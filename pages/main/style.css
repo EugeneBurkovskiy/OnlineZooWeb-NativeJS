@@ -292,7 +292,6 @@
     background-color: #E47209;
 }
 .button:active{
-    transition: all 0.4s;
     background-color: #4B9200;
 }
 .button:disabled{
