@@ -542,6 +542,7 @@
 .footer__menu-list{
     display: flex;
     justify-content: space-between;
+    margin-right: 32px;
 }
 .footer__menu-list li{
     margin-left: 54px;
