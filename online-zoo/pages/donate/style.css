@@ -72,6 +72,9 @@
 .header__descr:active{
     color: #F9804B;
 }
+.panda img{
+    width: 100%;
+}
 .button{
     color:#FFFFFF;
     background-color:#F9804B;
