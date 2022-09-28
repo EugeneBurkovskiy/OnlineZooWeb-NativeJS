@@ -443,13 +443,6 @@ input[type=radio]:checked + label:before {
 .footer__menu-list :first-child{
     margin-left: 0px;
 }
-.footer__menu-list li a:active{  
-    color: #F9804B;
-}
-.footer__menu-list li:first-child a{  
-    color:#F9804B;
-    cursor:default;
-}
 .footer__third-column{
     display: flex;
     flex-direction: column;
