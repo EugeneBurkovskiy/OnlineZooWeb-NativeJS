@@ -11,22 +11,50 @@
 </head>
 
 <body>
+    <div class="hamburger__content">
+        <img src="assets/icons/cross.svg" alt="cross" class="hamburger__close">
+        <a href="index.html" class="hamburger__logo">
+            <h1 class="hamburger__logo-descr">PetStory<br>online</h1>
+            <img src="assets/icons/bamboo-orange.svg" alt="" class="header__logo-bamboo">
+        </a>
+        <nav class="hamburger__menu">
+            <ul class="hamburger__menu-list">
+                <li><a href="#" onclick="return false">About</a></li>
+                <li><a href="#">Map</a></li>
+                <li><a href="#">Zoos</a></li>
+                <li><a href="pages/donate/index.html">Donate</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+        <a href="https://www.figma.com/" class="hamburger__descr">Designed by ©</a>
+    </div>
     <header class="header">
         <div class="container">
             <div class="header__row">
-                <a href="../../index.html" class="header__logo">
-                    <h1 class="header__logo-descr">PetStory<br>online</h1>
-                    <img src="../../assets/icons/bamboo.svg" alt="bamboo" class="header__logo-bamboo">
-                </a>
-                <nav class="header__menu">
-                    <ul class="header__menu-list">
-                        <li><a href="../../index.html">About</a></li>
-                        <li><a href="#">Map</a></li>
-                        <li><a href="#">Zoos</a></li>
-                        <li><a href="#" onclick="return false">Donate</a></li>
-                        <li><a href="#">Contact us</a></li>
-                    </ul>
-                </nav>
+                <div class="header__wrapper">
+                    <a href="../../index.html" class="header__logo">
+                        <h1 class="header__logo-descr">PetStory<br>online</h1>
+                        <picture>
+                            <source srcset="assets/icons/bamboo.svg" media="(max-width: 1599px)" />
+                            <source srcset="assets/icons/bamboo-min.svg" media="(max-width: 999px)" />
+                            <img src="../../assets/icons/bamboo.svg" alt="" class="header__logo-bamboo">
+                        </picture>
+                    </a>
+                    <nav class="header__menu">
+                        <ul class="header__menu-list">
+                            <li><a href="../../index.html">About</a></li>
+                            <li><a href="#">Map</a></li>
+                            <li><a href="#">Zoos</a></li>
+                            <li><a onclick="return false">Donate</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <a href="https://www.figma.com/" class="header__descr">Designed by ©</a>
             </div>
         </div>
@@ -51,8 +79,8 @@
                 <div class="pick__block-display">
                     <div class="pick__block-number">4<p>Panda diet for the day</p>
                     </div>
-                    <img src="../../assets/icons/cross.svg" alt="cross">
-                    <img src="../../assets/icons/panda.svg" alt="animal">
+                    <img src="../../assets/icons/cross.svg" alt="cross" class="pick__cross">
+                    <img src="../../assets/icons/panda.svg" alt="animal" class="pick__animal">
                 </div>
                 <div class="pick__block-scroll">
                     <p>Amount</p>
@@ -100,61 +128,142 @@
     </section>
     <footer class="footer">
         <div class="container">
-            <div class="footer__columns">
-                <div class="footer__first-column">
-                    <a href="../../index.html" class="header__logo">
-                        <h1 class="header__logo-descr">PetStory<br>online</h1>
-                        <img src="../../assets/icons/bamboo.svg" alt="" class="header__logo-bamboo">
+            <div class="footer__first-row">
+                <a href="../../index.html" class="header__logo">
+                    <h1 class="header__logo-descr">PetStory<br>online</h1>
+                    <img src="../../assets/icons/bamboo.svg" alt="bamboo" class="header__logo-bamboo">
+                </a>
+                <form action="#">
+                    <label for="email">Subscribe to our news</label>
+                    <input type="email" placeholder="Enter your email" id="email" required>
+                    <button>Submit</button>
+                </form>
+            </div>
+            <a href="pages/donate/index.html" class="button">
+                <p>donate for volunteers</p>
+            </a>
+            <div class="footer__second-row">
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/" class="footer__social-item">
+                        <div class="footer__social-image"><img src="../../assets/icons/facebook.svg" alt="facebook">
+                        </div>
+                        <span>Facebook</span>
                     </a>
-                    <a href="#" class="button">
-                        <p>donate for volunteers</p>
+                    <a href="https://twitter.com/" class="footer__social-item">
+                        <div class="footer__social-image"><img src="../../assets/icons/twitter.svg" alt="Twitter">
+                        </div>
+                        <span>Twitter</span>
                     </a>
-                    <div class="footer__social">
-                        <a href="https://www.facebook.com/" class="footer__social-item">
-                            <div class="footer__social-image"><img src="../../assets/icons/facebook.svg" alt="facebook">
-                            </div>
-                            <span>Facebook</span>
-                        </a>
-                        <a href="https://twitter.com/" class="footer__social-item">
-                            <div class="footer__social-image"><img src="../../assets/icons/twitter.svg" alt="Twitter">
-                            </div>
-                            <span>Twitter</span>
-                        </a>
-                        <a href="https://www.instagram.com/" class="footer__social-item">
-                            <div class="footer__social-image"><img src="../../assets/icons/instagram.svg"
-                                    alt="Instagram">
-                            </div>
-                            <span>Instagram</span>
-                        </a>
-                        <a href="https://www.youtube.com/" class="footer__social-item">
-                            <div class="footer__social-image"><img src="../../assets/icons/youtube.svg" alt="YouTube">
-                            </div>
-                            <span>YouTube</span>
-                        </a>
-                    </div>
+                    <a href="https://www.instagram.com/" class="footer__social-item">
+                        <div class="footer__social-image"><img src="../../assets/icons/instagram.svg" alt="Instagram">
+                        </div>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.youtube.com/" class="footer__social-item">
+                        <div class="footer__social-image"><img src="../../assets/icons/youtube.svg" alt="YouTube">
+                        </div>
+                        <span>YouTube</span>
+                    </a>
                 </div>
-                <div class="footer__second-column">
-                    <nav class="footer__menu">
-                        <ul class="footer__menu-list">
-                            <li><a href="../../index.html">About</a></li>
-                            <li><a href="#">Map</a></li>
-                            <li><a href="#">Zoos</a></li>
-                            <li><a href="#">Contact us</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="footer__third-column">
-                    <form action="#">
-                        <label for="email">Subscribe to our news</label>
-                        <input type="email" placeholder="Enter your email" id="email" required>
-                        <button>Submit</button>
-                    </form>
-                    <div class="footer__designed">
-                        <p>Designed by Alisa Samborskaya</p>
-                        <p>©RSSchool & ©Yem Digital 2021</p>
-                    </div>
+                <nav class="footer__menu">
+                    <ul class="footer__menu-list">
+                        <li><a href="../../index.html">About</a></li>
+                        <li><a href="#">Map</a></li>
+                        <li><a href="#">Zoos</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__designed">
+                    <p>Designed by Alisa Samborskaya</p>
+                    <p>©RSSchool & ©Yem Digital 2021</p>
                 </div>
             </div>
+        </div>
+    </footer>
+    <!-- footer-labtop -->
+    <footer class="footer-labtop">
+        <div class="container">
+            <div class="footer-labtop__firstcolumn">
+                <a href="../../index.html" class="header__logo">
+                    <h1 class="header__logo-descr">PetStory<br>online</h1>
+                    <picture>
+                        <img src="../../assets/icons/bamboo.svg" alt="" class="header__logo-bamboo">
+                    </picture>
+                </a>
+                <a href="#" class="button">
+                    <p>donate for volunteers</p>
+                </a>
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li><a href="../../index.html">About</a></li>
+                        <li><a href="#">Map</a></li>
+                        <li><a href="#">Zoos</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-labtop__secondcolumn">
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/" class="footer__social-item">
+                        <img src="../../assets/icons/facebook.svg" alt="facebook">
+
+                    </a>
+                    <a href="https://twitter.com/" class="footer__social-item">
+                        <img src="../../assets/icons/twitter.svg" alt="Twitter">
+
+                    </a>
+                    <a href="https://www.instagram.com/" class="footer__social-item">
+                        <img src="../../assets/icons/instagram.svg" alt="Instagram">
+
+                    </a>
+                    <a href="https://www.youtube.com/" class="footer__social-item">
+                        <img src="../../assets/icons/youtube.svg" alt="YouTube">
+
+                    </a>
+                </div>
+                <div class="footer__designed">
+                    <p>Designed by Alisa Samborskaya</p>
+                    <p>©RSSchool & ©Yem Digital 2021</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-mobile -->
+    <footer class="footer-mobile">
+        <div class="container">
+            <a href="../../index.html" class="footer-mobile__title">
+                <span>PetStory online</span>
+                <img src="../../assets/icons/bamboo.svg" alt="bamboo">
+            </a>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/" class="footer__social-item">
+                    <img src="../../assets/icons/facebook.svg" alt="facebook">
+                </a>
+                <a href="https://twitter.com/" class="footer__social-item">
+                    <img src="../../assets/icons/twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/" class="footer__social-item">
+                    <img src="../../assets/icons/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://www.youtube.com/" class="footer__social-item">
+                    <img src="../../assets/icons/youtube.svg" alt="YouTube">
+                </a>
+            </div>
+            <a href="#" class="button">
+                <p>donate for volunteers</p>
+            </a>
+            <div class="footer__designed">
+                <p>Designed by Alisa Samborskaya</p>
+                <p>©RSSchool & ©Yem Digital 2021</p>
+            </div>
+            <nav class="footer-mobile__menu">
+                <ul class="footer-mobile__menu-list">
+                    <li><a href="../../index.html">About</a></li>
+                    <li><a href="#">Map</a></li>
+                    <li><a href="#">Zoos</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </nav>
         </div>
     </footer>
     <script src="script.js"></script>
