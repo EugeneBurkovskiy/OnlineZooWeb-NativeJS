@@ -926,6 +926,112 @@ input[type=radio]:checked + label:before {
             font-size: 14px;
             line-height: 140%;
         }
+        .panda{
+            width: 100%;
+            height: 220px;
+            transform: translateZ(50px);
+        }
+        .panda img{
+            width: 100%;
+            height: 100%;
+        }
+        .pick{
+            padding-top: 28px;
+            padding-bottom: 15px;
+        }
+        .pick__descr{
+            margin-bottom: 20px;
+        }
+        .pick__subtitle{
+            font-size: 24px;
+        }
+        .pick__block-title{
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .pick__block-descr{
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .pick__block-display{
+            width: 100%;
+            height: 145px;
+            margin-bottom: 0px;
+        }
+        .pick__block-number{
+            font-size: 40.6015px;
+            line-height: 80%;
+            top: 62px;
+            left: 3px;
+        }
+        .pick__block-number p {
+            font-size: 9.02255px;
+        }
+        .pick__cross {
+            width: 3%;
+            height: 4%;
+            left: 96px;
+            top: 76px;
+        }
+        .pick__animal {
+            width: 160px;
+            height: 190px;
+            right: -1px;
+            top: -23px;
+        }
+        .pick__block-scroll{
+            margin-bottom: 10px;
+        }
+        .pick__block-scroll p {
+            margin-bottom: 7px;
+            margin-left: -20px;
+        }
+        .pick__block-scrollbar {
+            width: 100%;
+            padding: 6px 17.5px;
+            height: 13.5px;
+            margin-bottom: 7px;
+        }
+        .pick__block-elipse{
+            width: 5px;
+            height: 5px
+        }
+        .pick__block-elipse_active::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: -8px;
+            left: -7px;
+            border-radius: 100%;
+            border: 2px solid #FE9013;
+            cursor: pointer;
+        }
+        .pick__block-elipse_active::after {
+            content: '';
+            width: 11.48px;
+            height: 11.48px;
+            position: absolute;
+            top: -3.4px;
+            left: -2.4px;
+            border-radius: 100%;
+            border: 2px solid #FE9013;
+            cursor: pointer;
+        }
+        .pick__block-sum{
+            margin-bottom: 25px;
+        }
+        .pick__block-sum li{
+            font-size: 13px;
+            width: 30px;
+            text-align: left;
+        }
+        .pick__form input[name="another-amount"] {
+            height: 36px;
+        }
+        .pick__form-radio{
+            margin-bottom: 24px;
+        }
         .footer-labtop{
             display: none;
         }
