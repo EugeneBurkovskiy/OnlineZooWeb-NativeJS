@@ -765,9 +765,9 @@ input[type=radio]:checked + label:before {
             width: 201%;
             transform: translate(-234px,34px);
         }
-        .pick{
+        .pick {
             padding-top: 30px;
-            padding-bottom: 43px;
+            padding-bottom: 45px;
         }
         .pick__title{
             width: 100%;
@@ -821,8 +821,8 @@ input[type=radio]:checked + label:before {
         .pick__block-sum li:nth-child(3){
             display: none;
         }
-        .pick__block-display{
-            margin-bottom: 35px;
+        .pick__block-display {
+            margin-bottom: 40px;
         }
         .pick__block-scroll p{
             margin-bottom: 7px;
@@ -937,9 +937,9 @@ input[type=radio]:checked + label:before {
             width: 257%;
             transform: translate(-170px,18px);
         }
-        .pick{
+        .pick {
             padding-top: 28px;
-            padding-bottom: 15px;
+            padding-bottom: 10px;
         }
         .pick__descr{
             margin-bottom: 20px;
@@ -1020,8 +1020,8 @@ input[type=radio]:checked + label:before {
             border: 2px solid #FE9013;
             cursor: pointer;
         }
-        .pick__block-sum{
-            margin-bottom: 25px;
+        .pick__block-sum {
+            margin-bottom: 30px;
         }
         .pick__block-sum li{
             font-size: 13px;
