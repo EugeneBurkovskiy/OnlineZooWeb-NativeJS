@@ -20,4 +20,21 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // adaptive
+    window.addEventListener('resize', () => {
+        numbers.forEach(num => {
+            num.classList.remove('sum_active');
+        });
+        amount.forEach(pick => {
+            pick.classList.remove('pick__block-elipse_active');
+        });
+
+        if (window.screen.width < 1000) {
+            amount[5].classList.add('pick__block-elipse_active');
+            numbers[5].classList.add('sum_active');
+        } else {
+            amount[2].classList.add('pick__block-elipse_active');
+            numbers[2].classList.add('sum_active');
+        }
+    });
 });
