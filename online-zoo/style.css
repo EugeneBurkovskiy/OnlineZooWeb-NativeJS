@@ -690,10 +690,10 @@
     .watch .button{
         margin-left: 0px;
     }
-    .backstage{
+    .backstage {
         padding-top: 100px;
         margin-bottom: 0px;
-        padding-bottom: 150px;
+        padding-bottom: 147px;
     }
     .backstage__row img{
         display: block;
@@ -823,11 +823,14 @@
     .footer .header__logo-bamboo{
         left: 30px;
     }
+    .footer__menu{
+        padding-bottom: 5px;
+    }
     .footer__menu-list li{
         margin-right: 48px;
     }
     .footer__designed {
-        padding-bottom: 10px;
+        padding-bottom: 5px;
         padding-left: 5px;
     }
     .footer__designed p{
@@ -1279,7 +1282,7 @@
         }
         .backstage{
             padding-top: 55px;
-            padding-bottom: 55px;
+            padding-bottom: 58px;
         }
         .backstage__row{
             display: block;
@@ -1300,7 +1303,7 @@
             margin-bottom: 10px;
         }
         .backstage__description h3 {
-            margin-top: 20px;
+            margin-top: 14px;
             margin-bottom: 10px;
         }
         .backstage__description p{
@@ -1405,7 +1408,7 @@
         }
         .testimonials__title{
             font-size: 24px;
-            margin-bottom: 16px;
+            margin-bottom: 19px;
         }
         .testimonials__item{
             height: 109px;
@@ -1413,7 +1416,7 @@
             margin-bottom: 16px;
         }
         .testimonials__row{
-            margin-bottom: 17px;
+            margin-bottom: 14px;
         }
         .testimonials__leave{
             bottom: -30px
