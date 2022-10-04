@@ -939,13 +939,16 @@ input[type=radio]:checked + label:before {
         }
         .pick {
             padding-top: 28px;
-            padding-bottom: 10px;
+            padding-bottom: 7px;
         }
         .pick__descr{
             margin-bottom: 20px;
         }
         .pick__subtitle{
             font-size: 24px;
+        }
+        .pick__block {
+            padding: 24px 0px 31px 0px;
         }
         .pick__block-title{
             font-size: 24px;
@@ -985,7 +988,7 @@ input[type=radio]:checked + label:before {
             margin-bottom: 10px;
         }
         .pick__block-scroll p {
-            margin-bottom: 7px;
+            margin-bottom: 10px;
             margin-left: -20px;
         }
         .pick__block-scrollbar {
@@ -1021,7 +1024,7 @@ input[type=radio]:checked + label:before {
             cursor: pointer;
         }
         .pick__block-sum {
-            margin-bottom: 30px;
+            margin-bottom: 26px;
         }
         .pick__block-sum li{
             font-size: 13px;
@@ -1029,7 +1032,7 @@ input[type=radio]:checked + label:before {
             text-align: left;
         }
         .pick__form input[name="another-amount"] {
-            height: 36px;
+            height: 40px;
         }
         .pick__form-radio{
             margin-bottom: 24px;
