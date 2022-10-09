@@ -92,7 +92,10 @@ window.addEventListener('DOMContentLoaded', () => {
         petsSecondRow = document.querySelector('.slider__container-secondrow'),
         petsCards = petsMainSection.querySelectorAll('.choose__item');
     let newCardsArr = [];
+
     petsNext.addEventListener('click', () => {
+        petsFirstRow.classList.add('slideInRight');
+        petsSecondRow.classList.add('slideInRight');
         petsNext.style.pointerEvents = 'none';
         petsCards.forEach(card => {
             newCardsArr.push(card.cloneNode(true));
@@ -113,10 +116,17 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
         newCardsArr = [];
-        petsNext.style.pointerEvents = '';
+        setTimeout(() => {
+            petsNext.style.pointerEvents = '';
+            petsFirstRow.classList.remove('slideInRight');
+            petsSecondRow.classList.remove('slideInRight');
+        }, 600);
     });
 
     petsPrev.addEventListener('click', () => {
+        petsFirstRow.classList.add('slideOutLeft');
+        petsSecondRow.classList.add('slideOutLeft');
+        petsPrev.style.pointerEvents = 'none';
         petsCards.forEach(card => {
             newCardsArr.push(card.cloneNode(true));
         });
@@ -135,7 +145,16 @@ window.addEventListener('DOMContentLoaded', () => {
                 petsSecondRow.append(card);
             }
         });
+        petsFirstRow.classList.add('slideInLeft');
+        petsSecondRow.classList.add('slideInLeft');
         newCardsArr = [];
+        setTimeout(() => {
+            petsPrev.style.pointerEvents = '';
+            petsFirstRow.classList.remove('slideInLeft');
+            petsSecondRow.classList.remove('slideInLeft');
+            petsFirstRow.classList.remove('slideOutLeft');
+            petsSecondRow.classList.remove('slideOutLeft');
+        }, 600);
     });
 
 

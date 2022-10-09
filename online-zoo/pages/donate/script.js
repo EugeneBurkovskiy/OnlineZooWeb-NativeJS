@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    input.addEventListener('change', () => {
+    input.addEventListener('input', () => {
         for (let i = 0; i < numbers.length; i++) {
 
             if (input.value == numbers[i].textContent) {
