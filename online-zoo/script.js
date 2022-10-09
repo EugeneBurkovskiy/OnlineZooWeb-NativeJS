@@ -37,51 +37,67 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     // pets slider
 
-    // function slider(next, prev, line, cards) {
-    //     const petsNext = document.querySelector('.choose__next'),
-    //         petsPrev = document.querySelector('.choose__prev'),
-    //         petsLine = document.querySelector('.choose__line'),
-    //         petsCards = petsLine.querySelectorAll('.choose__row > .choose__item'),
-    //         petsWindowWidth = window.getComputedStyle(document.querySelector('.choose__container')).width;
+    function slider(next, prev, line, cards) {
+        const petsMainSection = document.querySelector('.slider__container'),
+            petsNext = petsMainSection.querySelector('.choose__next'),
+            petsPrev = petsMainSection.querySelector('.choose__prev'),
+            petsRow = petsMainSection.querySelector('.choose__row'),
+            petsCards = petsMainSection.querySelectorAll('.choose__item');
 
-    //     let petsLineStep = 0,
-    //         newCardsArr = [],
-    //         checkStep = {
-    //             totalStep: 0,
-    //             currentStep: 0
-    //         };
+        let newCardsArr = [];
 
-    //     petsPrev.addEventListener('click', () => {
-    //         if (petsLineStep > 0) {
-    //             petsLineStep -= +petsWindowWidth.match(/\d/ig).join('');
-    //             petsLine.style.transform = `translateX(-${petsLineStep}px)`;
-    //             checkStep['currentStep'] -= 1;
-    //         }
-    //     });
-    //     petsNext.addEventListener('click', () => {
-    //         const chooseRow = document.createElement('div');
-    //         chooseRow.classList.add('choose__row');
-    //         petsCards.forEach(card => {
-    //             newCardsArr.push(card.cloneNode(true));
-    //         });
-    //         newCardsArr.sort(() => Math.random() - 0.5);
-    //         newCardsArr.forEach(card => {
-    //             chooseRow.append(card);
-    //             chooseRow.querySelectorAll('.choose__item').forEach(newCard => {
-    //                 showInfo(newCard);
-    //             });
-    //         });
-    //         if (checkStep['totalStep'] == checkStep['currentStep']) {
-    //             petsLine.append(chooseRow);
-    //             checkStep['totalStep'] += 1;
-    //         }
-    //         petsLineStep += +petsWindowWidth.match(/\d/ig).join('');
-    //         petsLine.style.transform = `translateX(-${petsLineStep}px)`;
-    //         checkStep['currentStep'] += 1;
-    //         newCardsArr = [];
-    //     });
-    // }
-    // slider('.choose__next', '.choose__prev', '.choose__line', '.choose__row > .choose__item');
+        petsNext.addEventListener('click', () => {
+            petsNext.style.pointerEvents = 'none';
+            petsCards.forEach(card => {
+                newCardsArr.push(card.cloneNode(true));
+            });
+            newCardsArr.sort(() => Math.random() - 0.5);
+
+            petsRow.querySelectorAll('.choose__item').forEach(item => {
+                item.remove();
+            });
+
+            newCardsArr.forEach((card, i) => {
+                petsRow.append(card);
+            });
+            newCardsArr = [];
+            petsRow.classList.add('slideInRight');
+            setTimeout(() => {
+                petsNext.style.pointerEvents = '';
+                petsRow.classList.remove('slideInRight');
+            }, 600);
+        });
+
+        petsPrev.addEventListener('click', () => {
+            petsPrev.style.pointerEvents = 'none';
+            petsCards.forEach(card => {
+                newCardsArr.push(card.cloneNode(true));
+            });
+            newCardsArr.sort(() => Math.random() - 0.5);
+
+            petsFirstRow.querySelectorAll('.choose__item').forEach(item => {
+                item.remove();
+            });
+            petsSecondRow.querySelectorAll('.choose__item').forEach(item => {
+                item.remove();
+            });
+            newCardsArr.forEach((card, i) => {
+                if (i < 3) {
+                    petsFirstRow.append(card);
+                } else {
+                    petsSecondRow.append(card);
+                }
+            });
+            petsRow.classList.add('slideInLeft');
+            newCardsArr = [];
+            setTimeout(() => {
+                petsPrev.style.pointerEvents = '';
+                petsRow.classList.remove('slideInLeft');
+            }, 600);
+        });
+
+    }
+    slider();
 
 
 
@@ -124,8 +140,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     petsPrev.addEventListener('click', () => {
-        petsFirstRow.classList.add('slideOutLeft');
-        petsSecondRow.classList.add('slideOutLeft');
         petsPrev.style.pointerEvents = 'none';
         petsCards.forEach(card => {
             newCardsArr.push(card.cloneNode(true));
