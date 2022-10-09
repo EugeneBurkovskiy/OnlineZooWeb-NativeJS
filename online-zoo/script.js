@@ -75,27 +75,20 @@ window.addEventListener('DOMContentLoaded', () => {
             });
             newCardsArr.sort(() => Math.random() - 0.5);
 
-            petsFirstRow.querySelectorAll('.choose__item').forEach(item => {
+            petsRow.querySelectorAll('.choose__item').forEach(item => {
                 item.remove();
             });
-            petsSecondRow.querySelectorAll('.choose__item').forEach(item => {
-                item.remove();
-            });
+
             newCardsArr.forEach((card, i) => {
-                if (i < 3) {
-                    petsFirstRow.append(card);
-                } else {
-                    petsSecondRow.append(card);
-                }
+                petsRow.append(card);
             });
-            petsRow.classList.add('slideInLeft');
             newCardsArr = [];
+            petsRow.classList.add('slideInLeft');
             setTimeout(() => {
                 petsPrev.style.pointerEvents = '';
                 petsRow.classList.remove('slideInLeft');
             }, 600);
         });
-
     }
     slider();
 
