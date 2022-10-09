@@ -13,16 +13,16 @@
 <body>
     <div class="hamburger__content">
         <img src="../../assets/icons/cross.svg" alt="cross" class="hamburger__close">
-        <a href="index.html" class="hamburger__logo">
+        <a href="../../index.html" class="hamburger__logo">
             <h1 class="hamburger__logo-descr">PetStory<br>online</h1>
             <img src="../../assets/icons/bamboo-orange.svg" alt="" class="header__logo-bamboo">
         </a>
         <nav class="hamburger__menu">
             <ul class="hamburger__menu-list">
-                <li><a href="#" onclick="return false">About</a></li>
+                <li><a href="../../index.html">About</a></li>
                 <li><a href="#">Map</a></li>
                 <li><a href="#">Zoos</a></li>
-                <li><a href="pages/donate/index.html">Donate</a></li>
+                <li><a href="#" onclick="return false">Donate</a></li>
                 <li><a href="#">Contact us</a></li>
             </ul>
         </nav>
@@ -86,10 +86,10 @@
                         <ul class="pick__block-insidescroll">
                             <li class="pick__block-elipse"></li>
                             <li class="pick__block-elipse"></li>
+                            <li class="pick__block-elipse"></li>
+                            <li class="pick__block-elipse"></li>
+                            <li class="pick__block-elipse"></li>
                             <li class="pick__block-elipse pick__block-elipse_active"></li>
-                            <li class="pick__block-elipse"></li>
-                            <li class="pick__block-elipse"></li>
-                            <li class="pick__block-elipse"></li>
                             <li class="pick__block-elipse"></li>
                             <li class="pick__block-elipse"></li>
                         </ul>
@@ -97,17 +97,18 @@
                     <ul class="pick__block-sum">
                         <li>5000</li>
                         <li>2000</li>
-                        <li class="sum_active">1000</li>
+                        <li>1000</li>
                         <li>500</li>
                         <li>250</li>
-                        <li>100</li>
+                        <li class="sum_active">100</li>
                         <li>50</li>
                         <li>25</li>
                     </ul>
                 </div>
                 <form class="pick__form">
                     <div class="pick__form-input">
-                        <input type="tel" maxlength="4" placeholder="Another amount" name="another-amount">
+                        <input id='another-amount' type="number" maxlength="4" placeholder="Another amount"
+                            name="another-amount" value="100">
                         <img src="../../assets/icons/dollar.svg" alt="dollar">
                     </div>
                     <div class="pick__form-radio">

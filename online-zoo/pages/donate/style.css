@@ -9,6 +9,13 @@
 .hamburger__content{
     display: none;
 }
+.hamburger__menu li a:hover{
+    color: #F9804B;
+}
+.hamburger__menu li:nth-child(4) a{
+    cursor: default;
+    color: #F9804B;
+}
 .header{
     background-color: #000000;
     padding: 12px 0px 15px 0px;
@@ -257,7 +264,18 @@
     position: relative;
     padding-left: 0;
     list-style-type: none;
+    animation-duration: 1s;
+    animation-name: slidein;
 }
+@keyframes slidein {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+        opacity: 1;
+    }
+  }
 .pick__block-elipse_active::before{
     content:'';
     width: 40px;
@@ -324,7 +342,7 @@
     background: none;
     border: 1px solid #929699;
     border-radius: 2px;
-    color:#929699;
+    color: #000;;
     position: relative;
 }
 .pick__form input[name="another-amount"]:focus{
@@ -680,7 +698,7 @@ input[type=radio]:checked + label:before {
             font-family: "Roboto",sans-serif;
             display: block;
             width: 100%;
-            background: #FFFFFF;
+            background: rgba(255, 255, 255, 0.9);
             height: 100%;
             position: fixed;
             z-index: 11;
@@ -718,7 +736,7 @@ input[type=radio]:checked + label:before {
         }
         .hamburger__content .hamburger__descr{
             color:#333B41;
-            display: block;
+            display: inline;
         }
         .hamburger span{
             display: block;
@@ -971,6 +989,7 @@ input[type=radio]:checked + label:before {
         }
         .pick__block-number p {
             font-size: 9.02255px;
+            margin-top: 4px;
         }
         .pick__cross {
             width: 3%;
